@@ -51,11 +51,15 @@ class Quiz {
     );
   }
 
-  averageDifficulty(){
-        const totalDifficulty = this.questions.reduce(
-          (acc, currentValue) => acc + currentValue.difficulty,
-          0
-        );
-        return totalDifficulty / this.questions.length;
+  averageDifficulty() {
+    const totalDifficulty = this.questions.reduce(
+      (acc, currentValue) => acc + currentValue.difficulty,
+      0
+    );
+    return totalDifficulty / this.questions.length;
+  }
+
+  getCorrectAnswersCount() {
+    return this.correctAnswers || 0; // Return the correctAnswers property
   }
 }
